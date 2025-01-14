@@ -1,18 +1,4 @@
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-img.rotate {
-    animation: rotate 5s linear infinite;
-    transform-origin: center;
-}
-
 .flash-sale {
     text-align: center;
     padding: 10px;
@@ -66,4 +52,23 @@ img.rotate {
     background-color: #bbb;
 }
 
+
+#filter-form .form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#filter-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#filter-category {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
