@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedBites Menu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-image: url('header-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004c3f;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .menu-item img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        .menu-item h3 {
+            margin: 0;
+            color: #006644;
+        }
+        .menu-item p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlessedBites. </h1>
+        <p>BlessedBites. &trade; offers premium halal prepared meals, delivering wholesome and delicious food that honors Islamic dietary principles and culinary excellence.</p>
+    </header>
+
+    <nav>
+        <a href="menuProject.html">Menu</a>
+        <a href="index.html">Home</a>
+        <a href="cartProject.html">Cart</a>
+        <a href="review.html">Review</a>     
+    </nav>
+
+    <main>
+        <section>
+            <h2>Special BlessedBites. Offerings</h2>
+            <div class="menu-item">
+                <img src="ayamberempah.png" alt="Nasi Lemak Ayam Berempah" class="rotate">
+                <div>
+                   <h3>BlessedBites.Nasi Lemak Ayam Berempah</h3>
+                   <p><strong>Price: RM 8.00</strong></p>
+                   <button onclick="addToCart('Nasi Lemak Ayam Berempah', 8, 'ayamberempah.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="nasikerabu.png" alt="Nasi Kerabu" class="rotate">
+                <div>
+                   <h3>BlessedBites. Nasi Kerabu</h3>
+                   <p><strong>Price: RM 8.00</strong></p>
+                   <button onclick="addToCart('Nasi Kerabu', 8, 'nasikerabu.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="ayamchop.png" alt="Chicken Chop with rice" class="rotate">
+                <div>
+                   <h3>BlessedBites. Chicken Chop with Rice</h3>
+                   <p><strong>Price: RM 10.00</strong></p>
+                   <button onclick="addToCart('Chicken Chop with rice', 10, 'ayamchop.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="nasigoreng.png" alt="Nasi Goreng" class="rotate">
+                <div>
+                   <h3>BlessedBites. Nasi Goreng Special</h3>
+                   <p><strong>Price: RM 7.00</strong></p>
+                   <button onclick="addToCart('Nasi Goreng Special', 7, 'nasigoreng.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="buttermilk.png" alt="Buttermilk Rice" class="rotate">
+                <div>
+                   <h3>BlessedBites. Buttermilk Rice</h3>
+                   <p><strong>Price: RM 8.00</strong></p>
+                   <button onclick="addToCart('Buttermilk Rice', 8, 'buttermilk.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="chickenchop.png" alt="Chicken Chop" class="rotate">
+                <div>
+                   <h3>BlessedBites. Chicken Chop</h3>
+                   <p><strong>Price: RM 8.00</strong></p>
+                   <button onclick="addToCart('Chicken Chop', 8, 'chickenchop.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="salad.png" alt="Healthy" class="rotate">
+                <div>
+                   <h3>BlessedBites. Healthy Meal</h3>
+                   <p><strong>Price: RM 6.00</strong></p>
+                   <button onclick="addToCart('Healthy Meal', 6, 'salad.png')">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BlessedBites. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scriptProject.js"></script>
+</body>
+</html>

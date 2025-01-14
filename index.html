@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedBites Home</title>
+    <link rel="stylesheet" href="styleProject.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }    
+        header {
+            background-image: url('header-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004c3f;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1{
+            color: #fff;
+        }
+        .about-us-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .about-description {
+            flex: 2;
+        }
+        .food-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            flex: 1;
+        }
+        .food-images img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlessedBites. </h1>
+        <p>BlessedBites. &trade; offers premium halal prepared meals, delivering wholesome and delicious food that honors Islamic dietary principles and culinary excellence.</p>
+    </header>
+
+    <nav>
+        <a href="menuProject.html">Menu</a>
+        <a href="index.html">Home</a>
+        <a href="cartProject.html">Cart</a>
+        <a href="review.html">Review</a>
+    </nav>
+
+    <main>
+        <section class="flash-sale">
+            <h2>FLASH SALE</h2>
+            <div class="flash-sale-images">
+                <div class="flash-sale-item">
+                    <img src="FS1.jpg" alt="Flash Sale Item 1">
+                    <p>Discounted BlessedBites. Nasi Kerabu</p>
+                </div>
+                <div class="flash-sale-item">
+                    <img src="FS2.jpg" alt="Flash Sale Item 2">
+                    <p>Special BlessedBites. Nasi Lemak Ayam Berempah</p>
+                </div>
+                <div class="flash-sale-item">
+                    <img src="FS3.jpg" alt="Flash Sale Item 3">
+                    <p>Monday FAV : BlessedBites. Healthy Meal</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="how-it-works">
+            <h2>How does it work?</h2>
+
+            <div class="step">
+            <strong>Select location</strong>
+            <em>Choose the location where your food will be delivered.</em>
+            </div>
+
+            <div class="step">
+            <strong>Choose your cravings</strong>
+            <em>Check the menus to pick up your favorite food.</em>
+            </div>
+
+            <div class="step">
+            <strong>Pay in advanced</strong>
+            <em>It's quick, safe and simple. Select several methods of payment.</em>
+            </div>
+
+            <div class="step">
+                <strong>Enjoy your meal!</strong>
+                <em>Food is made and delivered directly to your home.</em>
+                </div>
+        </section>
+
+        <section id="aboutus">
+            <h2>About us</h2>
+            <div class="about-us-container">
+                <div class="about-description">
+                    <p>Welcome to <em>BlessedBites</em>, where every meal is crafted with love, care and the highest standards of quality. As a proudly halal food business, we are committed to serving dishes that not only taste incredible but also meet the dietary needs of our valued customers.
+                    At <em>BlessedBites.</em>, we believe that great food has the power to bring people together and create unforgettable moments.</p>
+                    <p>Thank you for choosing <em>BlessedBites.</em>, where flavor, tradition, and heart come together.</p>
+                </div>
+                <div class="food-images">
+                    <img src="nasigoreng.png" alt="Nasi Lemak Ayam Berempah">
+                    <img src="nasikerabu.png" alt="Nasi Kerabu">
+                    <img src="ayamchop.png" alt="Chicken Chop with Rice">
+                    <img src="buttermilk.png" alt="Buttermilk Rice">
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BlessedBites. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

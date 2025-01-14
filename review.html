@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedBites Review</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-image: url('header-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004c3f;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            background-color: #004c3f;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #006644;
+        }
+        footer {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .reviews {
+            margin-top: 20px;
+        }
+        .review-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .review-item h3 {
+            margin: 0;
+            color: #004c3f;
+        }
+        .review-item p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlessedBites Review</h1>
+        <p1>"Your feedback fuels our flavor! Help us spice up our service by sharing your thoughts!"</p1>
+    </header>
+
+    <nav>
+        <a href="menuProject.html">Menu</a>
+        <a href="index.html">Home</a>
+        <a href="cartProject.html">Cart</a>
+        <a href="review.html">Review</a>
+    </nav>
+
+    <main>
+        <h2>Let Us Know What You Think, We’re All About the Feedback!</h2>
+        <form id="review-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Review:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Review" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div class="reviews" id="reviews-container">
+            <!-- Reviews will appear here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BlessedBites. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Load and display reviews from localStorage
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            const reviewsContainer = document.getElementById('reviews-container');
+
+            reviewsContainer.innerHTML = ''; // Clear existing reviews
+
+            if (reviews.length > 0) {
+                reviews.forEach((review) => {
+                    const reviewItem = document.createElement('div');
+                    reviewItem.classList.add('review-item');
+                    reviewItem.innerHTML = `
+                        <h3>${review.name}</h3>
+                        <p><strong>Email:</strong> ${review.email}</p>
+                        <p><strong>Review:</strong> ${review.message}</p>
+                    `;
+                    reviewsContainer.appendChild(reviewItem);
+                });
+            } else {
+                reviewsContainer.innerHTML = '<p>No reviews yet. Be the first to leave a review!</p>';
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('review-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Save the new review to localStorage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.push({ name, email, message });
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            // Display a thank you message and reset the form
+            alert(`Thank you, ${name}, for your review! We'll get back to you at ${email}.`);
+            document.getElementById('review-form').reset();
+
+            // Reload the reviews after submitting
+            loadReviews();
+        });
+
+        // Initial load of reviews when the page is loaded
+        loadReviews();
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedBites Cart</title>
+    <link rel="stylesheet" href="styleProject.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }    
+        header {
+            background-image: url('header-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004c3f;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item span {
+            margin: 0;
+        }
+
+        footer {
+            background-color: #004c3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlessedBites. </h1>
+        <p>BlessedBites. &trade; offers premium halal prepared meals, delivering wholesome and delicious food that honors Islamic dietary principles and culinary excellence.</p>
+    </header>
+
+    <nav>
+        <a href="menuProject.html">Menu</a>
+        <a href="index.html">Home</a>
+        <a href="cartProject.html">Cart</a>       
+        <a href="review.html">Review</a>
+    </nav>
+
+    <main>
+        <div id="cart-container">
+        </div>
+        <div class="checkout-container">
+            <button onclick="proceedToCheckout()">Checkout</button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BlessedBites. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scriptProject.js"></script>
+
+    <script>
+        loadCart();
+    </script>
+</body>
+</html>

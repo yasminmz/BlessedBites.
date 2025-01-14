@@ -1,0 +1,69 @@
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+img.rotate {
+    animation: rotate 5s linear infinite;
+    transform-origin: center;
+}
+
+.flash-sale {
+    text-align: center;
+    padding: 10px;
+    background-color: #004c3f;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.flash-sale h2 {
+    color: #f8f1f1; 
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.flash-sale-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.flash-sale-item {
+    text-align: center;
+    width: 100px;
+}
+
+.flash-sale-item img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flash-sale-item p {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #f8f1f1; 
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #bbb;
+}
+
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlessedBites Checkout</title>
+    <link rel="stylesheet" href="styleProject.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background-color: #004c3f;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .order-summary {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkout-button {
+            display: block;
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #004c3f;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .checkout-button:hover {
+            background-color: #006644;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlessedBites Checkout</h1>
+    </header>
+
+    <main>
+        <h2>Order Summary</h2>
+        <div id="order-summary" class="order-summary"></div>
+
+        <h2>Total Amount</h2>
+        <p id="total-amount">RM 0.00</p>
+
+        <h2>Payment Method</h2>
+        <form id="checkout-form">
+            <div class="form-group">
+                <label for="payment-method">Choose a payment method:</label>
+                <select id="payment-method" required>
+                    <option value="" disabled selected>Select a payment method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                    <option value="cash-on-delivery">Cash on Delivery</option>
+                </select>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <button type="button" class="back-button" onclick="goBackToCart()">Back</button>
+                <button type="submit" class="checkout-button">Place Order</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="scriptProject.js"></script>
+</body>
+</html>
