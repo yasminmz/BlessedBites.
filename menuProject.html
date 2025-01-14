@@ -88,62 +88,98 @@
     </nav>
 
     <main>
-        <section>
+        <form id="filter-form" style="margin-bottom: 20px; max-width: 300px; margin-left: auto; margin-right: auto;">
+            <div class="form-group">
+                <label for="filter-category">Choose a category :</label>
+                <select id="filter-category" onchange="filterMenu(this.value)" required>
+                    <option value="all" selected>All</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+        </form>
+ 
+        <section id="menu-items">
             <h2>Special BlessedBites. Offerings</h2>
-            <div class="menu-item">
-                <img src="ayamberempah.png" alt="Nasi Lemak Ayam Berempah" class="rotate">
+            <div class="menu-item" data-category="lunch">
+                <img src="ayamberempah.png" alt="Nasi Lemak Ayam Berempah">
                 <div>
                    <h3>BlessedBites.Nasi Lemak Ayam Berempah</h3>
                    <p><strong>Price: RM 8.00</strong></p>
                    <button onclick="addToCart('Nasi Lemak Ayam Berempah', 8, 'ayamberempah.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="nasikerabu.png" alt="Nasi Kerabu" class="rotate">
+            <div class="menu-item" data-category="lunch">
+                <img src="nasikerabu.png" alt="Nasi Kerabu">
                 <div>
                    <h3>BlessedBites. Nasi Kerabu</h3>
                    <p><strong>Price: RM 8.00</strong></p>
                    <button onclick="addToCart('Nasi Kerabu', 8, 'nasikerabu.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="ayamchop.png" alt="Chicken Chop with rice" class="rotate">
+            <div class="menu-item" data-category="lunch dinner">
+                <img src="ayamchop.png" alt="Chicken Chop with rice" >
                 <div>
                    <h3>BlessedBites. Chicken Chop with Rice</h3>
                    <p><strong>Price: RM 10.00</strong></p>
                    <button onclick="addToCart('Chicken Chop with rice', 10, 'ayamchop.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="nasigoreng.png" alt="Nasi Goreng" class="rotate">
+            <div class="menu-item" data-category="dinner">
+                <img src="nasigoreng.png" alt="Nasi Goreng">
                 <div>
                    <h3>BlessedBites. Nasi Goreng Special</h3>
                    <p><strong>Price: RM 7.00</strong></p>
                    <button onclick="addToCart('Nasi Goreng Special', 7, 'nasigoreng.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="buttermilk.png" alt="Buttermilk Rice" class="rotate">
+            <div class="menu-item" data-category="lunch">
+                <img src="buttermilk.png" alt="Buttermilk Rice">
                 <div>
                    <h3>BlessedBites. Buttermilk Rice</h3>
                    <p><strong>Price: RM 8.00</strong></p>
                    <button onclick="addToCart('Buttermilk Rice', 8, 'buttermilk.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="chickenchop.png" alt="Chicken Chop" class="rotate">
+            <div class="menu-item" data-category="dinner">
+                <img src="chickenchop.png" alt="Chicken Chop" >
                 <div>
                    <h3>BlessedBites. Chicken Chop</h3>
                    <p><strong>Price: RM 8.00</strong></p>
                    <button onclick="addToCart('Chicken Chop', 8, 'chickenchop.png')">Add to Cart</button>
                 </div>
             </div>
-            <div class="menu-item">
-                <img src="salad.png" alt="Healthy" class="rotate">
+            <div class="menu-item" data-category="dinner">
+                <img src="pattaya.png" alt="Pattaya" >
+                <div>
+                   <h3>BlessedBites. Nasi Goreng Pattaya</h3>
+                   <p><strong>Price: RM 7.00</strong></p>
+                   <button onclick="addToCart('Pattaya', 7, 'pattaya.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="breakfast">
+                <img src="salad.png" alt="Healthy" >
                 <div>
                    <h3>BlessedBites. Healthy Meal</h3>
                    <p><strong>Price: RM 6.00</strong></p>
                    <button onclick="addToCart('Healthy Meal', 6, 'salad.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="breakfast">
+                <img src="bread.png" alt="bread" >
+                <div>
+                   <h3>BlessedBites. Sandwich Egg</h3>
+                   <p><strong>Price: RM 4.00</strong></p>
+                   <button onclick="addToCart('Sandwich Egg', 4, 'bread.png')">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item" data-category="breakfast">
+                <img src="croissant.png" alt="croissant" >
+                <div>
+                   <h3>Scrambled Egg Croissant with Chicken Slice</h3>
+                   <p><strong>Price: RM 5.00</strong></p>
+                   <button onclick="addToCart('Croissant', 5, 'croissant.png')">Add to Cart</button>
                 </div>
             </div>
         </section>
