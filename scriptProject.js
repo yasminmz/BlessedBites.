@@ -6,7 +6,6 @@ function addToCart(itemName, itemPrice, itemImg) {
     updateCartPage();
 }
 
-// Save cart to localStorage
 function updateCartPage() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
@@ -14,7 +13,7 @@ function updateCartPage() {
 function loadCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartContainer = document.getElementById('cart-container');
-    cartContainer.innerHTML = ''; // Clear existing items
+    cartContainer.innerHTML = ''; 
 
     if (cart.length > 0) {
         cart.forEach((item, index) => {
@@ -36,9 +35,9 @@ function loadCart() {
         
 function removeItemFromCart(index) {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.splice(index, 1); // Remove item from array
+    cart.splice(index, 1); 
     localStorage.setItem('cart', JSON.stringify(cart)); // Save updated cart to localStorage
-    loadCart(); // Reload cart
+    loadCart();
 }
 
 function proceedToCheckout() {
@@ -109,4 +108,16 @@ if (window.location.pathname.includes('cartProject.html')) {
 } else if (window.location.pathname.includes('checkoutPage.html')) {
     loadCheckoutCart();
     handleCheckoutForm();
+}
+
+function filterMenu(category) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => {
+        const categories = item.getAttribute('data-category').split(' ');
+        if (category === 'all' || categories.includes(category)) {
+            item.style.display = 'flex'; 
+        } else {
+            item.style.display = 'none'; 
+        }
+    });
 }
